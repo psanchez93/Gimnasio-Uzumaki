@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases - Guerrero Fighter</title>
+    <link rel="stylesheet" href="estilos/clases.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navegacion">
+            <a href="index.html">
+                <div class="logo">
+                    <h1>GIMNASIO UZUMAKI</h1>
+                </div>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html" class="activo">Clases</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="area-usuario.html">Área Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cabecera-clases">
+            <h2>Nuestras Clases</h2>
+            <p>Encuentra la disciplina perfecta para ti</p>
+        </section>
+
+        <section class="horarios-clases">
+            <h3>Horarios Semanales</h3>
+            <div class="tabs-horarios">
+                <button class="tab-boton activo" data-dia="lunes">Lunes</button>
+                <button class="tab-boton" data-dia="martes">Martes</button>
+                <button class="tab-boton" data-dia="miercoles">Miércoles</button>
+                <button class="tab-boton" data-dia="jueves">Jueves</button>
+                <button class="tab-boton" data-dia="viernes">Viernes</button>
+                <button class="tab-boton" data-dia="sabado">Sábado</button>
+            </div>
+
+            <div class="contenido-tabs">
+                <div class="tab-contenido activo" id="lunes">
+                    <div class="clase-horario">
+                        <span class="hora">9:00 - 10:30</span>
+                        <span class="disciplina">Boxeo Técnico</span>
+                        <span class="instructor">Instructor: Carlos Ruiz</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">11:00 - 12:30</span>
+                        <span class="disciplina">Muay Thai Principiantes</span>
+                        <span class="instructor">Instructor: Ana Martínez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">18:00 - 19:30</span>
+                        <span class="disciplina">MMA Avanzado</span>
+                        <span class="instructor">Instructor: David López</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">20:00 - 21:30</span>
+                        <span class="disciplina">Jiu-Jitsu</span>
+                        <span class="instructor">Instructor: Miguel Santos</span>
+                    </div>
+                </div>
+
+                <div class="tab-contenido" id="martes">
+                    <div class="clase-horario">
+                        <span class="hora">9:00 - 10:30</span>
+                        <span class="disciplina">Muay Thai Intermedio</span>
+                        <span class="instructor">Instructor: Ana Martínez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">11:00 - 12:30</span>
+                        <span class="disciplina">Boxeo Principiantes</span>
+                        <span class="instructor">Instructor: Carlos Ruiz</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">18:00 - 19:30</span>
+                        <span class="disciplina">Preparación Física</span>
+                        <span class="instructor">Instructor: Laura Gómez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">20:00 - 21:30</span>
+                        <span class="disciplina">MMA Principiantes</span>
+                        <span class="instructor">Instructor: David López</span>
+                    </div>
+                </div>
+
+                <div class="tab-contenido" id="miercoles">
+                    <div class="clase-horario">
+                        <span class="hora">9:00 - 10:30</span>
+                        <span class="disciplina">Jiu-Jitsu Avanzado</span>
+                        <span class="instructor">Instructor: Miguel Santos</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">11:00 - 12:30</span>
+                        <span class="disciplina">Boxeo Competición</span>
+                        <span class="instructor">Instructor: Carlos Ruiz</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">18:00 - 19:30</span>
+                        <span class="disciplina">Muay Thai Técnico</span>
+                        <span class="instructor">Instructor: Ana Martínez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">20:00 - 21:30</span>
+                        <span class="disciplina">Defensa Personal</span>
+                        <span class="instructor">Instructor: David López</span>
+                    </div>
+                </div>
+
+                <div class="tab-contenido" id="jueves">
+                    <div class="clase-horario">
+                        <span class="hora">9:00 - 10:30</span>
+                        <span class="disciplina">MMA Técnico</span>
+                        <span class="instructor">Instructor: David López</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">11:00 - 12:30</span>
+                        <span class="disciplina">Jiu-Jitsu Principiantes</span>
+                        <span class="instructor">Instructor: Miguel Santos</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">18:00 - 19:30</span>
+                        <span class="disciplina">Boxeo Fitness</span>
+                        <span class="instructor">Instructor: Laura Gómez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">20:00 - 21:30</span>
+                        <span class="disciplina">Muay Thai Sparring</span>
+                        <span class="instructor">Instructor: Ana Martínez</span>
+                    </div>
+                </div>
+
+                <div class="tab-contenido" id="viernes">
+                    <div class="clase-horario">
+                        <span class="hora">9:00 - 10:30</span>
+                        <span class="disciplina">Preparación Física</span>
+                        <span class="instructor">Instructor: Laura Gómez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">11:00 - 12:30</span>
+                        <span class="disciplina">Boxeo Técnico</span>
+                        <span class="instructor">Instructor: Carlos Ruiz</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">18:00 - 19:30</span>
+                        <span class="disciplina">MMA Open Mat</span>
+                        <span class="instructor">Instructor: David López</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">20:00 - 21:30</span>
+                        <span class="disciplina">Jiu-Jitsu Rolling</span>
+                        <span class="instructor">Instructor: Miguel Santos</span>
+                    </div>
+                </div>
+
+                <div class="tab-contenido" id="sabado">
+                    <div class="clase-horario">
+                        <span class="hora">10:00 - 11:30</span>
+                        <span class="disciplina">Boxeo para Todos</span>
+                        <span class="instructor">Instructor: Carlos Ruiz</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">12:00 - 13:30</span>
+                        <span class="disciplina">Muay Thai Intensivo</span>
+                        <span class="instructor">Instructor: Ana Martínez</span>
+                    </div>
+                    <div class="clase-horario">
+                        <span class="hora">16:00 - 17:30</span>
+                        <span class="disciplina">MMA Libre</span>
+                        <span class="instructor">Instructor: David López</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detalles-clases">
+            <h3>Información de Clases</h3>
+            <div id="acordeon-clases">
+                <h4>Boxeo</h4>
+                <div>
+                    <p><strong>Descripción:</strong> Aprende el arte del pugilismo con técnicas profesionales. Desde lo
+                        básico hasta nivel competición.</p>
+                    <p><strong>Niveles:</strong> Principiante, Intermedio, Avanzado, Competición</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <p><strong>Equipo necesario:</strong> Guantes, vendas, ropa deportiva</p>
+                </div>
+
+                <h4>Muay Thai</h4>
+                <div>
+                    <p><strong>Descripción:</strong> El arte marcial tailandés de las 8 extremidades. Combina puños,
+                        codos, rodillas y patadas.</p>
+                    <p><strong>Niveles:</strong> Principiante, Intermedio, Técnico</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <p><strong>Equipo necesario:</strong> Guantes, espinilleras, vendas</p>
+                </div>
+
+                <h4>MMA (Artes Marciales Mixtas)</h4>
+                <div>
+                    <p><strong>Descripción:</strong> Combina técnicas de striking y grappling. Preparación completa para
+                        combate mixto.</p>
+                    <p><strong>Niveles:</strong> Principiante, Técnico, Avanzado</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <p><strong>Equipo necesario:</strong> Guantes MMA, espinilleras, protector bucal</p>
+                </div>
+
+                <h4>Jiu-Jitsu Brasileño</h4>
+                <div>
+                    <p><strong>Descripción:</strong> Arte marcial enfocado en el combate en el suelo. Técnicas de
+                        sumisión y control.</p>
+                    <p><strong>Niveles:</strong> Principiante, Avanzado</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <p><strong>Equipo necesario:</strong> Kimono (Gi) o ropa deportiva (No-Gi)</p>
+                </div>
+
+                <h4>Preparación Física</h4>
+                <div>
+                    <p><strong>Descripción:</strong> Entrenamiento funcional y de acondicionamiento para mejorar fuerza,
+                        resistencia y explosividad.</p>
+                    <p><strong>Niveles:</strong> Todos los niveles</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <p><strong>Equipo necesario:</strong> Ropa deportiva</p>
+                </div>
+
+                <h4>Defensa Personal</h4>
+                <div>
+                    <p><strong>Descripción:</strong> Técnicas prácticas de autodefensa para situaciones reales. Enfoque
+                        en prevención y respuesta.</p>
+                    <p><strong>Niveles:</strong> Todos los niveles</p>
+                    <p><strong>Duración:</strong> 90 minutos</p>
+                    <p><strong>Equipo necesario:</strong> Ropa deportiva cómoda</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="precios">
+            <h3>Planes y Precios</h3>
+            <div class="grid-precios">
+                <div class="tarjeta-precio">
+                    <h4>Mensual</h4>
+                    <p class="precio-grande">69€<span>/mes</span></p>
+                    <ul>
+                        <li>✓ Acceso ilimitado a clases</li>
+                        <li>✓ Uso libre del gimnasio</li>
+                        <li>✓ Vestuario y duchas</li>
+                        <li>✗ Sin compromiso permanencia</li>
+                    </ul>
+                    <button class="boton-precio">Elegir Plan</button>
+                </div>
+                <div class="tarjeta-precio">
+                    <h4>Trimestral</h4>
+                    <p class="precio-grande">59€<span>/mes</span></p>
+                    <ul>
+                        <li>✓ Acceso ilimitado a clases</li>
+                        <li>✓ Uso libre del gimnasio</li>
+                        <li>✓ Vestuario y duchas</li>
+                        <li>✓ 1 clase personal gratis</li>
+                        <li>✓ 10% dto. en tienda</li>
+                    </ul>
+                    <button class="boton-precio">Elegir Plan</button>
+                </div>
+                <div class="tarjeta-precio">
+                    <h4>Anual</h4>
+                    <p class="precio-grande">49€<span>/mes</span></p>
+                    <ul>
+                        <li>Acceso ilimitado a clases</li>
+                        <li>Uso libre del gimnasio</li>
+                        <li>Vestuario y duchas</li>
+                        <li>2 clases personales gratis</li>
+                        <li>20% dto. en tienda</li>
+                        <li>Invitación a eventos</li>
+                    </ul>
+                    <button class="boton-precio">Elegir Plan</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <h3>GIMNASIO UZUMAKI</h3>
+                <p>Tu gimnasio de deportes de contacto</p>
+            </div>
+            <div class="contacto-footer">
+                <p>Calle del Combate, 123</p>
+                <p>+34 976 000 000</p>
+                <p>info@gimnasiouzumaki.es</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 GIMNASIO UZUMAKI. Todos los derechos reservados.</p>
+
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            // Sistema de tabs para horarios
+            $('.tab-boton').click(function () {
+                let dia = $(this).data('dia');
+
+                $('.tab-boton').removeClass('activo');
+                $(this).addClass('activo');
+
+                $('.tab-contenido').removeClass('activo').hide();
+                $('#' + dia).addClass('activo').show();
+            });
+
+            // Acordeón para detalles de clases (jQuery UI)
+            $('#acordeon-clases').accordion({
+                collapsible: true,
+                heightStyle: "content",
+                animate: 300
+            });
+
+            // Efecto en tarjetas de precio
+            $('.tarjeta-precio').hover(
+                function () {
+                    $(this).find('.boton-precio').animate({
+                        padding: '15px 35px'
+                    }, 200);
+                },
+                function () {
+                    $(this).find('.boton-precio').animate({
+                        padding: '12px 30px'
+                    }, 200);
+                }
+            );
+
+            // Click en botones de precio
+            $('.boton-precio').click(function () {
+                let plan = $(this).closest('.tarjeta-precio').find('h4').text();
+                alert('¡Excelente elección!\n\nPlan seleccionado: ' + plan + '\n\nVisita nuestra sección de contacto o pasa por el gimnasio para completar tu inscripción.');
+            });
+
+
+            // Animación para tarjetas de precio
+            $('.tarjeta-precio').hide().each(function (index) {
+                $(this).delay(200 * index).fadeIn(600);
+            });
+
+            // Efecto hover en horarios de clase
+            $('.clase-horario').hover(
+                function () {
+                    $(this).css({
+                        'transform': 'translateX(10px)',
+                        'box-shadow': '0 5px 20px rgba(255, 68, 0, 0.4)'
+                    });
+                },
+                function () {
+                    $(this).css({
+                        'transform': 'translateX(0)',
+                        'box-shadow': 'none'
+                    });
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

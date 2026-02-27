@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Guerrero Fighter</title>
+    <link rel="stylesheet" href="estilos/tienda.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navegacion">
+            <a href="index.html">
+                <div class="logo">
+                    <h1>GIMNASIO UZUMAKI</h1>
+                </div>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="tienda.html" class="activo">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="area-usuario.html">Área Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cabecera-tienda">
+            <h2>Tienda de Material Deportivo</h2>
+            <p>Equípate como un profesional</p>
+        </section>
+
+        <div class="contenedor-tienda">
+            <aside class="categorias">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#" class="categoria-filtro activa" data-categoria="todos">Todos los Productos</a></li>
+                    <li><a href="#" class="categoria-filtro" data-categoria="guantes">Guantes</a></li>
+                    <li><a href="#" class="categoria-filtro" data-categoria="proteccion">Protección</a></li>
+                    <li><a href="#" class="categoria-filtro" data-categoria="ropa">Ropa</a></li>
+                    <li><a href="#" class="categoria-filtro" data-categoria="accesorios">Accesorios</a></li>
+                </ul>
+            </aside>
+
+            <section class="productos">
+                <div class="grid-productos">
+                    <!-- Producto 1 -->
+                    <article class="tarjeta-producto" data-categoria="guantes">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Guantes tienda.png"
+                                alt="Guantes profesionales de boxeo de color negro y rojo">
+                        </div>
+                        <h3>Guantes de Boxeo Pro</h3>
+                        <p class="descripcion">Guantes profesionales de 12oz con espuma de alta densidad</p>
+                        <p class="precio">49.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="tarjeta-producto" data-categoria="proteccion">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Bucal.png" alt="Protector bucal">
+
+                        </div>
+                        <h3>Protector Bucal</h3>
+                        <p class="descripcion">Protector moldeable con estuche incluido</p>
+                        <p class="precio">12.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="tarjeta-producto" data-categoria="ropa">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Camiseta.png" alt="Camiseta negra con logo fight club">
+
+                        </div>
+                        <h3>Camiseta de Entrenamiento</h3>
+                        <p class="descripcion">Tejido transpirable de secado rápido</p>
+                        <p class="precio">24.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="tarjeta-producto" data-categoria="proteccion">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Casco.png" alt="Casco de sparring cerrado color negro">
+                        </div>
+                        <h3>Casco de Sparring</h3>
+                        <p class="descripcion">Máxima protección con visibilidad total</p>
+                        <p class="precio">79.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="tarjeta-producto" data-categoria="accesorios">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Bolsa.png" alt="Bolsa de deportes de color negro con gran capacidad">
+                        </div>
+                        <h3>Bolsa Deportiva</h3>
+                        <p class="descripcion">Espaciosa y resistente, con compartimentos</p>
+                        <p class="precio">34.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="tarjeta-producto" data-categoria="guantes">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Vendas.png" alt="Vendas elásticas de 3 metros de color negro">
+                        </div>
+                        <h3>Vendas de Manos</h3>
+                        <p class="descripcion">Pack de 2 vendas elásticas de 3 metros</p>
+                        <p class="precio">9.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 7 -->
+                    <article class="tarjeta-producto" data-categoria="ropa">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Pantalon.png" alt="Pantalon MMA color negro con tigre">
+                        </div>
+                        <h3>Pantalón de MMA</h3>
+                        <p class="descripcion">Diseño elástico para máxima movilidad</p>
+                        <p class="precio">39.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <!-- Producto 8 -->
+                    <article class="tarjeta-producto" data-categoria="proteccion">
+                        <div class="imagen-producto">
+                            <img src="imagenes/Espinilleras.png"
+                                alt="Espinilleras para la proteccion de tibias en color negro">
+                        </div>
+                        <h3>Espinilleras</h3>
+                        <p class="descripcion">Protección acolchada para tibias</p>
+                        <p class="precio">29.99€</p>
+                        <div class="selector-cantidad">
+                            <label>Cantidad:</label>
+                            <input type="number" class="cantidad-input" value="1" min="1" max="10">
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="carrito">
+                <h3>🛒 Mi Carrito</h3>
+                <div id="items-carrito">
+                    <p class="carrito-vacio">El carrito está vacío</p>
+                </div>
+                <div class="total-carrito">
+                    <p><strong>Total:</strong> <span id="precio-total">0.00€</span></p>
+                </div>
+                <button class="boton-finalizar" id="finalizar-compra">Finalizar Compra</button>
+                <button class="boton-vaciar" id="vaciar-carrito">Vaciar Carrito</button>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <h3>GIMNASIO UZUMAKI</h3>
+                <p>Tu gimnasio de deportes de contacto</p>
+            </div>
+            <div class="contacto-footer">
+                <p>Calle del Combate, 123</p>
+                <p>+34 976 000 000</p>
+                <p>info@gimnasiouzumaki.es</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 GIMNASIO UZUMAKI. Todos los derechos reservados.</p>
+
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            let carrito = [];
+
+            // Función para actualizar el carrito
+            function actualizarCarrito() {
+                let contenedorCarrito = $('#items-carrito');
+                let precioTotal = 0;
+
+                if (carrito.length === 0) {
+                    contenedorCarrito.html('<p class="carrito-vacio">El carrito está vacío</p>');
+                } else {
+                    contenedorCarrito.empty();
+                    carrito.forEach(function (item, index) {
+                        let subtotal = item.precio * item.cantidad;
+                        precioTotal += subtotal;
+
+                        let itemHTML = `
+                            <div class="item-carrito">
+                                <p class="nombre-item">${item.nombre}</p>
+                                <p class="cantidad-item">${item.cantidad} x ${item.precio.toFixed(2)}€</p>
+                                <p class="subtotal-item">${subtotal.toFixed(2)}€</p>
+                                <button class="boton-eliminar" data-index="${index}">✕</button>
+                            </div>
+                        `;
+                        contenedorCarrito.append(itemHTML);
+                    });
+                }
+
+                $('#precio-total').text(precioTotal.toFixed(2) + '€');
+            }
+
+            // Añadir producto al carrito
+            $('.boton-carrito').click(function () {
+                let tarjeta = $(this).closest('.tarjeta-producto');
+                let nombre = tarjeta.find('h3').text();
+                let precioTexto = tarjeta.find('.precio').text();
+                let precio = parseFloat(precioTexto.replace('€', ''));
+                let cantidad = parseInt(tarjeta.find('.cantidad-input').val());
+
+                // Verificar si el producto ya está en el carrito
+                let encontrado = false;
+                carrito.forEach(function (item) {
+                    if (item.nombre === nombre) {
+                        item.cantidad += cantidad;
+                        encontrado = true;
+                    }
+                });
+
+                if (!encontrado) {
+                    carrito.push({
+                        nombre: nombre,
+                        precio: precio,
+                        cantidad: cantidad
+                    });
+                }
+
+                // Animación del botón
+                $(this).text('¡Añadido!').css('background-color', '#00cc00');
+                setTimeout(() => {
+                    $(this).text('Añadir al Carrito').css('background-color', '');
+                }, 1000);
+
+                actualizarCarrito();
+            });
+
+            // Eliminar item del carrito
+            $(document).on('click', '.boton-eliminar', function () {
+                let index = $(this).data('index');
+                carrito.splice(index, 1);
+                $(this).closest('.item-carrito').fadeOut(300, function () {
+                    actualizarCarrito();
+                });
+            });
+
+            // Vaciar carrito
+            $('#vaciar-carrito').click(function () {
+                if (carrito.length > 0) {
+                    if (confirm('¿Estás seguro de vaciar el carrito?')) {
+                        carrito = [];
+                        $('#items-carrito').fadeOut(300, function () {
+                            actualizarCarrito();
+                            $(this).fadeIn(300);
+                        });
+                    }
+                }
+            });
+
+            // Finalizar compra
+            $('#finalizar-compra').click(function () {
+                if (carrito.length === 0) {
+                    alert('El carrito está vacío');
+                } else {
+                    let total = $('#precio-total').text();
+                    alert('¡Gracias por tu compra!\nTotal: ' + total + '\n\n(Esta es una tienda de demostración)');
+                    carrito = [];
+                    actualizarCarrito();
+                }
+            });
+
+            // Filtrar por categoría
+            $('.categoria-filtro').click(function (e) {
+                e.preventDefault();
+                let categoria = $(this).data('categoria');
+
+                $('.categoria-filtro').removeClass('activa');
+                $(this).addClass('activa');
+
+                if (categoria === 'todos') {
+                    $('.tarjeta-producto').fadeIn(400);
+                } else {
+                    $('.tarjeta-producto').fadeOut(200);
+                    $('.tarjeta-producto[data-categoria="' + categoria + '"]').fadeIn(400);
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

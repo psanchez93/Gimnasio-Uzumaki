@@ -1,0 +1,19 @@
+{
+  "usuarios": [
+    {
+      "usuario": "admin",
+      "contrasena": "admin123",
+      "nombre": "Administrador"
+    },
+    {
+      "usuario": "naruto",
+      "contrasena": "ramen2024",
+      "nombre": "Naruto Uzumaki"
+    },
+    {
+      "usuario": "jiraiya",
+      "contrasena": "sannin777",
+      "nombre": "Jiraiya Sensei"
+    }
+  ]
+}

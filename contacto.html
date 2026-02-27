@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Guerrero Fighter</title>
+    <link rel="stylesheet" href="estilos/contacto.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <a href="index.html">
+                <div class="logo">
+                    <h1>GIMNASIO UZUMAKI</h1>
+                </div>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+                <li><a href="area-usuario.html">Área Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cabecera-contacto">
+            <h2>Contacta con Nosotros</h2>
+            <p>Estamos aquí para ayudarte en tu camino al éxito</p>
+        </section>
+
+        <div class="contenedor-contacto">
+            <section class="info-contacto">
+                <h3>Información de Contacto</h3>
+                <div class="bloque-info">
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Calle del Combate, 123<br>50007 Zaragoza, España</p>
+                    </div>
+                </div>
+                <div class="bloque-info">
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+34 976 000 000<br>+34 000 000 000</p>
+                    </div>
+                </div>
+                <div class="bloque-info">
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@gimnasiouzumaki.es<br>contacto@gimnasiouzumaki.es</p>
+                    </div>
+                </div>
+                <div class="bloque-info">
+                    <div>
+                        <h4>Horario</h4>
+                        <p>Lunes - Viernes: 7:00 - 22:00<br>
+                        Sábados: 9:00 - 20:00<br>
+                        Domingos: 10:00 - 14:00</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="formulario-contacto">
+                <h3>Envíanos un Mensaje</h3>
+                <form id="form-contacto">
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required 
+                               title="Por favor, introduce tu nombre completo">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required
+                               title="Introduce un email válido (ejemplo@dominio.com)">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" 
+                               pattern="[0-9]{9,15}"
+                               title="Introduce un número de teléfono válido (9-15 dígitos)">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad"
+                               title="Introduce tu ciudad">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="informacion">Información general</option>
+                            <option value="inscripcion">Inscripción a clases</option>
+                            <option value="horarios">Consulta de horarios</option>
+                            <option value="precios">Precios y tarifas</option>
+                            <option value="evento">Organización de eventos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="fecha-visita">Fecha preferida para visita (opcional)</label>
+                        <input type="text" id="fecha-visita" name="fecha-visita"
+                               placeholder="Selecciona una fecha"
+                               title="Selecciona la fecha en la que te gustaría visitarnos">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="experiencia">Nivel de experiencia</label>
+                        <div id="experiencia" class="slider-experiencia"></div>
+                        <div class="etiquetas-slider">
+                            <span>Principiante</span>
+                            <span>Intermedio</span>
+                            <span>Avanzado</span>
+                        </div>
+                        <input type="hidden" id="nivel-experiencia" name="nivel-experiencia" value="0">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required
+                                  title="Cuéntanos en qué podemos ayudarte"></textarea>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            Acepto la política de privacidad y el tratamiento de mis datos
+                        </label>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Deseo recibir información sobre promociones y eventos
+                        </label>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                </form>
+
+                <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+                    <h4>✓ ¡Mensaje enviado con éxito!</h4>
+                    <p>Nos pondremos en contacto contigo lo antes posible.</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="mapa-ubicacion">
+            <h3>Nuestra Ubicación</h3>
+            <div class="mapa-placeholder">
+                <p>Calle del Combate 123, 50007 Zaragoza</p>
+                <p>Autobús: Líneas 33, 31, 42, 39</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <h3>GIMNASIO UZUMAKI</h3>
+                <p>Tu gimnasio de deportes de contacto</p>
+            </div>
+            <div class="contacto-footer">
+                <p>Calle del Combate, 123</p>
+                <p>+34 976 000 000</p>
+                <p>info@gimnasiouzumaki.es</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 GIMNASIO UZUMAKI. Todos los derechos reservados.</p>
+    
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Autocompletado para ciudades españolas
+            const ciudadesEspana = [
+                "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza",
+                "Málaga", "Murcia", "Palma", "Las Palmas", "Bilbao",
+                "Alicante", "Córdoba", "Valladolid", "Vigo", "Gijón",
+                "Granada", "Vitoria", "Elche", "Oviedo", "Santander"
+            ];
+
+            $("#ciudad").autocomplete({
+                source: ciudadesEspana,
+                minLength: 1
+            });
+
+            // Datepicker para fecha de visita
+            $("#fecha-visita").datepicker({
+                dateFormat: "dd/mm/yy",
+                minDate: 0,
+                maxDate: "+3M",
+                firstDay: 1,
+                dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+                monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                           "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+            });
+
+            // Slider para nivel de experiencia
+            $("#experiencia").slider({
+                min: 0,
+                max: 2,
+                step: 1,
+                value: 0,
+                slide: function(event, ui) {
+                    $("#nivel-experiencia").val(ui.value);
+                    const niveles = ["Principiante", "Intermedio", "Avanzado"];
+                    $(this).attr("title", niveles[ui.value]);
+                }
+            });
+
+            // Tooltips para los campos del formulario
+            $("input[title], textarea[title], select[title]").tooltip({
+                position: {
+                    my: "center bottom-10",
+                    at: "center top"
+                },
+                show: {
+                    effect: "fadeIn",
+                    duration: 200
+                },
+                hide: {
+                    effect: "fadeOut",
+                    duration: 200
+                }
+            });
+
+            // Validación y envío del formulario
+            $("#form-contacto").submit(function(e) {
+                e.preventDefault();
+
+                // Validar que se aceptaron los términos
+                if (!$("#terminos").is(":checked")) {
+                    alert("Debes aceptar la política de privacidad para continuar");
+                    return false;
+                }
+
+                // Obtener datos del formulario
+                const datosFormulario = {
+                    nombre: $("#nombre").val(),
+                    email: $("#email").val(),
+                    telefono: $("#telefono").val(),
+                    ciudad: $("#ciudad").val(),
+                    asunto: $("#asunto option:selected").text(),
+                    fechaVisita: $("#fecha-visita").val(),
+                    nivelExperiencia: ["Principiante", "Intermedio", "Avanzado"][$("#nivel-experiencia").val()],
+                    mensaje: $("#mensaje").val(),
+                    newsletter: $("#newsletter").is(":checked")
+                };
+
+                // Animación de envío
+                $(".boton-enviar").text("Enviando...").prop("disabled", true);
+
+                // Simular envío (en producción iría a un servidor)
+                setTimeout(function() {
+                    // Ocultar formulario con efecto
+                    $("#form-contacto").fadeOut(400, function() {
+                        // Mostrar mensaje de éxito
+                        $("#mensaje-exito").fadeIn(400);
+                        
+                        // Resetear formulario después de 3 segundos
+                        setTimeout(function() {
+                            $("#mensaje-exito").fadeOut(400, function() {
+                                $("#form-contacto")[0].reset();
+                                $("#experiencia").slider("value", 0);
+                                $(".boton-enviar").text("Enviar Mensaje").prop("disabled", false);
+                                $("#form-contacto").fadeIn(400);
+                            });
+                        }, 3000);
+                    });
+
+                    console.log("Datos del formulario:", datosFormulario);
+                }, 1500);
+            });
+
+            // Efecto acordeón en bloques de información
+            $(".bloque-info").hover(
+                function() {
+                    $(this).find(".icono-info").animate({
+                        fontSize: "3rem"
+                    }, 200);
+                },
+                function() {
+                    $(this).find(".icono-info").animate({
+                        fontSize: "2.5rem"
+                    }, 200);
+                }
+            );
+
+        });
+    </script>
+</body>
+</html>

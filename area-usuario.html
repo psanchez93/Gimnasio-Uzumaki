@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Usuario - Guerrero Fighter</title>
+    <link rel="stylesheet" href="estilos/area-usuario.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navegacion">
+            <a href="index.html">
+                <div class="logo">
+                    <h1>GIMNASIO UZUMAKI</h1>
+                </div>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="area-usuario.html" class="activo">Área Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Login -->
+        <section class="seccion-login" id="seccion-login">
+            <div class="contenedor-login">
+                <h2>Acceso a Área de Usuarios</h2>
+                <form id="form-login">
+                    <div class="grupo-login">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" required placeholder="Introduce tu usuario">
+                    </div>
+                    <div class="grupo-login">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena" required
+                            placeholder="Introduce tu contraseña">
+                    </div>
+                    <button type="submit" class="boton-login">Iniciar Sesión</button>
+                    <div class="nota-demo">
+                        <p><strong>Usuarios disponibles:</strong></p>
+                        <p>👤 admin / admin123</p>
+                        <p>👤 naruto / ramen2024</p>
+                        <p>👤 jiraiya / sannin777</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección de Usuario Logueado -->
+        <section class="seccion-usuario" id="seccion-usuario" style="display: none;">
+            <div class="cabecera-usuario">
+                <h2>Bienvenido, <span id="nombre-usuario"></span></h2>
+                <button class="boton-cerrar-sesion" id="cerrar-sesion">Cerrar Sesión</button>
+            </div>
+
+            <div class="contenedor-eventos">
+                <div class="eventos-disponibles">
+                    <h3>Eventos Disponibles</h3>
+                    <p class="descripcion-eventos">Apúntate a nuestros próximos eventos y competiciones</p>
+
+                    <div class="lista-eventos-disponibles">
+                        <article class="evento-disponible" data-evento="Seminario de Boxeo Avanzado">
+                            <div class="evento-info">
+                                <h4>Seminario de Boxeo Avanzado</h4>
+                                <p>📅 15 de Marzo, 2026</p>
+                                <p>🕐 10:00 - 14:00</p>
+                                <p>Instructor invitado: Campeón Nacional</p>
+                            </div>
+                            <button class="boton-apuntarse">Apuntarse</button>
+                        </article>
+
+                        <article class="evento-disponible" data-evento="Competición Interna MMA">
+                            <div class="evento-info">
+                                <h4>Competición Interna MMA</h4>
+                                <p>📅 22 de Marzo, 2026</p>
+                                <p>🕐 16:00 - 20:00</p>
+                                <p>Categorías: Principiante, Intermedio, Avanzado</p>
+                            </div>
+                            <button class="boton-apuntarse">Apuntarse</button>
+                        </article>
+
+                        <article class="evento-disponible" data-evento="Taller de Muay Thai con Maestro Tailandés">
+                            <div class="evento-info">
+                                <h4>Taller de Muay Thai con Maestro Tailandés</h4>
+                                <p>📅 5 de Abril, 2026</p>
+                                <p>🕐 11:00 - 15:00</p>
+                                <p>Técnicas tradicionales del Muay Thai</p>
+                            </div>
+                            <button class="boton-apuntarse">Apuntarse</button>
+                        </article>
+
+                        <article class="evento-disponible" data-evento="Torneo de Jiu-Jitsu Gi y No-Gi">
+                            <div class="evento-info">
+                                <h4>Torneo de Jiu-Jitsu Gi y No-Gi</h4>
+                                <p>📅 12 de Abril, 2026</p>
+                                <p>🕐 9:00 - 18:00</p>
+                                <p>Todas las categorías de peso y cinturón</p>
+                            </div>
+                            <button class="boton-apuntarse">Apuntarse</button>
+                        </article>
+
+                        <article class="evento-disponible" data-evento="Clase Maestra de Defensa Personal">
+                            <div class="evento-info">
+                                <h4>Clase Maestra de Defensa Personal</h4>
+                                <p>📅 20 de Abril, 2026</p>
+                                <p>🕐 17:00 - 19:00</p>
+                                <p>Situaciones reales de autodefensa</p>
+                            </div>
+                            <button class="boton-apuntarse">Apuntarse</button>
+                        </article>
+
+                        <article class="evento-disponible" data-evento="Sparring Night - Todos los Niveles">
+                            <div class="evento-info">
+                                <h4>Sparring Night - Todos los Niveles</h4>
+                                <p>📅 28 de Abril, 2026</p>
+                                <p>🕐 19:00 - 22:00</p>
+                                <p>Práctica libre con supervisión de instructores</p>
+                            </div>
+                            <button class="boton-apuntarse">Apuntarse</button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="mis-eventos">
+                    <h3>Mis Eventos Inscritos</h3>
+                    <p class="descripcion-eventos">Arrastra para reordenar tus eventos</p>
+
+                    <div id="lista-mis-eventos" class="lista-mis-eventos">
+                        <p class="sin-eventos">No estás inscrito en ningún evento todavía</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <h3>Guerrero Fighter</h3>
+                <p>Tu gimnasio de deportes de contacto</p>
+            </div>
+            <div class="contacto-footer">
+                <p>Calle del Combate, 123</p>
+                <p>+34 976 000 000</p>
+                <p>info@gimnasiouzumaki.es</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 GIMNASIO UZUMAKI. Todos los derechos reservados.</p>
+        
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            let eventosInscritos = [];
+            let usuariosData = null;
+
+            // Cargar usuarios desde JSON
+            $.ajax({
+                url: 'datos/usuarios.json',
+                dataType: 'json',
+                async: false,
+                success: function (data) {
+                    usuariosData = data;
+                    console.log('Usuarios cargados correctamente');
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error al cargar usuarios:', error);
+                    alert('Error al cargar el sistema de usuarios. Por favor, recarga la página.');
+                }
+            });
+
+            // Sistema de Login con JSON
+            $('#form-login').submit(function (e) {
+                e.preventDefault();
+
+                let usuarioInput = $('#usuario').val();
+                let contrasenaInput = $('#contrasena').val();
+
+                // Buscar usuario en el JSON
+                let usuarioEncontrado = null;
+
+                if (usuariosData && usuariosData.usuarios) {
+                    usuarioEncontrado = usuariosData.usuarios.find(function (user) {
+                        return user.usuario === usuarioInput && user.contrasena === contrasenaInput;
+                    });
+                }
+
+                if (usuarioEncontrado) {
+                    // Login exitoso
+                    $('#nombre-usuario').text(usuarioEncontrado.nombre);
+
+                    // Transición de secciones
+                    $('#seccion-login').fadeOut(400, function () {
+                        $('#seccion-usuario').fadeIn(400);
+                    });
+
+                    console.log('Login exitoso:', usuarioEncontrado.nombre);
+                } else {
+                    // Login fallido
+                    alert('Usuario o contraseña incorrectos.\n\nUsuarios disponibles:\n• admin / admin123\n• naruto / ramen2024\n• jiraiya / sannin777');
+                }
+            });
+
+            // Cerrar Sesión
+            $('#cerrar-sesion').click(function () {
+                if (confirm('¿Estás seguro de cerrar sesión?')) {
+                    $('#seccion-usuario').fadeOut(400, function () {
+                        $('#seccion-login').fadeIn(400);
+                        $('#form-login')[0].reset();
+                        eventosInscritos = [];
+                        actualizarListaEventos();
+                    });
+                }
+            });
+
+            // Función para actualizar la lista de eventos
+            function actualizarListaEventos() {
+                let contenedor = $('#lista-mis-eventos');
+
+                if (eventosInscritos.length === 0) {
+                    contenedor.html('<p class="sin-eventos">No estás inscrito en ningún evento todavía</p>');
+                } else {
+                    contenedor.empty();
+                    eventosInscritos.forEach(function (evento, index) {
+                        let eventoHTML = `
+                            <div class="evento-inscrito" data-index="${index}">
+                                <div class="handle">☰</div>
+                                <div class="evento-nombre">${evento}</div>
+                                <button class="boton-eliminar" data-index="${index}">✕</button>
+                            </div>
+                        `;
+                        contenedor.append(eventoHTML);
+                    });
+                }
+
+                inicializarSortable();
+            }
+
+            // Inicializar sortable (jQuery UI)
+            function inicializarSortable() {
+                $('#lista-mis-eventos').sortable({
+                    handle: '.handle',
+                    placeholder: 'evento-placeholder',
+                    cursor: 'move',
+                    opacity: 0.8,
+                    start: function (event, ui) {
+                        ui.item.addClass('arrastrando');
+                    },
+                    stop: function (event, ui) {
+                        ui.item.removeClass('arrastrando');
+
+                        // Actualizar array con nuevo orden
+                        let nuevoOrden = [];
+                        $('.evento-inscrito').each(function () {
+                            let index = $(this).data('index');
+                            nuevoOrden.push(eventosInscritos[index]);
+                        });
+                        eventosInscritos = nuevoOrden;
+                        actualizarListaEventos();
+                    }
+                });
+            }
+
+            // Apuntarse a evento
+            $(document).on('click', '.boton-apuntarse', function () {
+                let eventoCard = $(this).closest('.evento-disponible');
+                let nombreEvento = eventoCard.data('evento');
+
+                // Verificar que no esté ya inscrito
+                if (eventosInscritos.includes(nombreEvento)) {
+                    alert('Ya estás inscrito en este evento');
+                    return;
+                }
+
+                // Añadir evento con animación
+                eventosInscritos.push(nombreEvento);
+
+                // Feedback visual
+                $(this).text('¡Inscrito!').css('background-color', '#00cc00');
+                eventoCard.animate({
+                    opacity: 0.5
+                }, 200).animate({
+                    opacity: 1
+                }, 200);
+
+                setTimeout(() => {
+                    $(this).text('Apuntarse').css('background-color', '');
+                }, 1500);
+
+                actualizarListaEventos();
+
+                // Scroll automático a "Mis Eventos"
+                $('html, body').animate({
+                    scrollTop: $('.mis-eventos').offset().top - 100
+                }, 800);
+            });
+
+            // Eliminar evento
+            $(document).on('click', '.boton-eliminar', function () {
+                let index = $(this).data('index');
+                let eventoCard = $(this).closest('.evento-inscrito');
+
+                // Animación de eliminación
+                eventoCard.fadeOut(300, function () {
+                    eventosInscritos.splice(index, 1);
+                    actualizarListaEventos();
+                });
+            });
+
+            // Animaciones de entrada
+            $('.evento-disponible').hide().each(function (index) {
+                $(this).delay(100 * index).fadeIn(500);
+            });
+
+            // Efecto hover en eventos disponibles
+            $('.evento-disponible').hover(
+                function () {
+                    $(this).css('transform', 'translateY(-5px)');
+                },
+                function () {
+                    $(this).css('transform', 'translateY(0)');
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

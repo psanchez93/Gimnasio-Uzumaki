@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #0a0a0a;
+}
+
+/* Navegación */
+header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    box-shadow: 0 4px 15px rgba(255, 68, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: #ff4400;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 68, 0, 0.5);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #ff4400;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    background-size: cover;
+    background-position: center;
+    padding: 150px 5%;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-contenido h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ff4400;
+    text-shadow: 0 0 20px rgba(255, 68, 0, 0.5);
+}
+
+.hero-contenido p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+.boton-principal {
+    background: linear-gradient(135deg, #ff4400 0%, #cc3300 100%);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 68, 0, 0.4);
+    font-weight: bold;
+}
+
+.boton-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 68, 0, 0.6);
+}
+
+/* Disciplinas */
+.disciplinas {
+    padding: 80px 5%;
+    background-color: #0f0f0f;
+}
+
+.disciplinas h2 {
+    text-align: center;
+    color: #ff4400;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(255, 68, 0, 0.3);
+}
+
+.grid-disciplinas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-disciplina {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #333;
+}
+
+.tarjeta-disciplina:hover {
+    border-color: #ff4400;
+    box-shadow: 0 10px 30px rgba(255, 68, 0, 0.3);
+}
+
+.icono-disciplina {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-disciplina h3 {
+    color: #ff4400;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-disciplina p {
+    color: #bbb;
+    line-height: 1.8;
+}
+
+/* Instalaciones */
+.instalaciones {
+    padding: 80px 5%;
+    background-color: #1a1a1a;
+}
+
+.instalaciones h2 {
+    text-align: center;
+    color: #ff4400;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-instalaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instalacion {
+    background-color: #0f0f0f;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #ff4400;
+    transition: all 0.3s ease;
+}
+
+.instalacion:hover {
+    transform: translateX(10px);
+    box-shadow: -5px 0 15px rgba(255, 68, 0, 0.3);
+}
+
+.instalacion h4 {
+    color: #ff4400;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.instalacion p {
+    color: #aaa;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    color: #aaa;
+    padding: 3rem 5% 1rem;
+    border-top: 2px solid #ff4400;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.info-footer h3 {
+    color: #ff4400;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-footer p,
+.horario-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.horario-footer strong {
+    color: #ff4400;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-contenido h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-contenido p {
+        font-size: 1rem;
+    }
+    
+    .contenedor-testimonios {
+        flex-direction: column;
+    }
+    
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

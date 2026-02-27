@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #0a0a0a;
+}
+
+/* Navegación */
+header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    box-shadow: 0 4px 15px rgba(255, 68, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: #ff4400;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 68, 0, 0.5);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #ff4400;
+    color: #fff;
+}
+
+/* Cabecera Clases */
+.cabecera-clases {
+    background: linear-gradient(135deg, #ff4400 0%, #cc3300 100%);
+    padding: 60px 5%;
+    text-align: center;
+    color: #fff;
+}
+
+.cabecera-clases h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cabecera-clases p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Horarios */
+.horarios-clases {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 5%;
+}
+
+.horarios-clases h3 {
+    color: #ff4400;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tabs-horarios {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-boton {
+    background-color: #1a1a1a;
+    color: #ddd;
+    border: 2px solid #333;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tab-boton:hover {
+    border-color: #ff4400;
+    color: #ff4400;
+}
+
+.tab-boton.activo {
+    background: linear-gradient(135deg, #ff4400 0%, #cc3300 100%);
+    color: #fff;
+    border-color: #ff4400;
+}
+
+.contenido-tabs {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+.tab-contenido {
+    display: none;
+}
+
+.tab-contenido.activo {
+    display: block;
+}
+
+.clase-horario {
+    background-color: #0f0f0f;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    border-left: 4px solid #ff4400;
+    transition: all 0.3s ease;
+}
+
+.clase-horario:hover {
+    transform: translateX(10px);
+}
+
+.hora {
+    color: #ff4400;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.disciplina {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.instructor {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* Detalles de Clases */
+.detalles-clases {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.detalles-clases h3 {
+    color: #ff4400;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#acordeon-clases {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#acordeon-clases h4 {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: #ff4400;
+    padding: 1.5rem;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+#acordeon-clases .ui-accordion-header-active {
+    background: linear-gradient(135deg, #ff4400 0%, #cc3300 100%);
+    color: #fff;
+}
+
+#acordeon-clases .ui-accordion-content {
+    background-color: #0f0f0f;
+    color: #ddd;
+    padding: 1.5rem;
+    border: none;
+}
+
+#acordeon-clases p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+#acordeon-clases strong {
+    color: #ff4400;
+}
+
+/* Precios */
+.precios {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.precios h3 {
+    color: #ff4400;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.grid-precios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta-precio {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tarjeta-precio:hover {
+    transform: translateY(-10px);
+    border-color: #ff4400;
+    box-shadow: 0 15px 40px rgba(255, 68, 0, 0.3);
+}
+
+
+.tarjeta-precio h4 {
+    color: #ff4400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.precio-grande {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.precio-grande span {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.tarjeta-precio ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.tarjeta-precio ul li {
+    color: #ddd;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.boton-precio {
+    background: linear-gradient(135deg, #ff4400 0%, #cc3300 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.boton-precio:hover {
+    box-shadow: 0 5px 20px rgba(255, 68, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    color: #aaa;
+    padding: 3rem 5% 1rem;
+    border-top: 2px solid #ff4400;
+    margin-top: 4rem;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.info-footer h3 {
+    color: #ff4400;
+    margin-bottom: 0.5rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cabecera-clases h2 {
+        font-size: 1.8rem;
+    }
+    
+    .clase-horario {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
