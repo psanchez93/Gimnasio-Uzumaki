@@ -167,7 +167,7 @@
             $.ajax({
                 url: '/datos/usuarios.json',
                 dataType: 'json',
-                async: false,
+                async: true,
                 success: function (data) {
                     usuariosData = data;
                     console.log('Usuarios cargados correctamente');
